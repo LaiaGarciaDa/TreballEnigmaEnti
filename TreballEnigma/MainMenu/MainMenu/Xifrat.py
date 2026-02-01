@@ -14,6 +14,7 @@ def Notches():
     Posicionamiento_de_notch(lista3, notch3)
 
 
+#Creem la funcio per xifrar
 def xifrar():
     TextoDescifrar = input("Que vols xifrar: ")
     TextoNuevoDescifrar = TextoDescifrar.replace(" ", "").upper()
@@ -62,11 +63,11 @@ def xifrar():
     print("Text xifrat correctament")
     print("Text xifrat: ", listaNuevaPosicionFinal)     
      
-
+#Funcio per rotar les llistes
 def RotarLista(llista):
     llista.append(llista.pop(0))
 
-
+#Funcio per posicionar els notchs
 def Posicionamiento_de_notch(listas, notch):
     while True:
         if listas[0] != notch:
@@ -74,22 +75,22 @@ def Posicionamiento_de_notch(listas, notch):
         else:
             break
 
-
+#Funcio per escriure el text xifrat en un fitxer
 def escribeTexto(listadeletras):
     archivo = open('Text.txt', 'w')
     archivo.write(listadeletras)
 
-
+#Funcio per posicionar a la lletra inicial
 def Posicionar_a_inicial(llista, lletra_inicial):
     while llista[0] != lletra_inicial:
         RotarLista(llista)
-
+#Funcio per escriure el text desxifrat en un fitxer
 def escribeTextoDesxifrat(listadeletras):
     archivo = open('desxifrat.txt', 'w')
     archivo.write(listadeletras)
     print(f"[OK] Missatge desxifrat a 'desxifrat.txt'")
 
-
+#Funcio per desxifrar
 def desxifrar():
     try:
         with open('Text.txt', 'r') as archivo:
@@ -136,4 +137,11 @@ def desxifrar():
     TextoDesxifratFinal = "".join(listaNouDesxifrat)
     
     escribeTextoDesxifrat(TextoDesxifratFinal)
+    print("Text original (desxifrat):", TextoDesxifratFinal)
+        
+    
+    TextoDesxifratFinal = "".join(listaNouDesxifrat)
+    
+    escribeTextoDesxifrat(TextoDesxifratFinal)
+
     print("Text original (desxifrat):", TextoDesxifratFinal)
