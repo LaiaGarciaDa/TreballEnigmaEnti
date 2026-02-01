@@ -1,3 +1,5 @@
+import Desxifrat as d
+
 separador = 5
 TextoSeparado = []
 listaABC = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',' ']
@@ -75,10 +77,9 @@ def Posicionamiento_de_notch(listas, notch):
         else:
             break
 
-#Funcio per escriure el text xifrat en un fitxer
+#Funcio per escriure el text xifrat en un fitxer desde un altre .py
 def escribeTexto(listadeletras):
-    archivo = open('Text.txt', 'w')
-    archivo.write(listadeletras)
+    d.aplicar_abecedari_dins_txt(listadeletras)
 
 #Funcio per posicionar a la lletra inicial
 def Posicionar_a_inicial(llista, lletra_inicial):
@@ -138,10 +139,8 @@ def desxifrar():
     
     escribeTextoDesxifrat(TextoDesxifratFinal)
     print("Text original (desxifrat):", TextoDesxifratFinal)
-        
-    
-    TextoDesxifratFinal = "".join(listaNouDesxifrat)
     
     escribeTextoDesxifrat(TextoDesxifratFinal)
 
     print("Text original (desxifrat):", TextoDesxifratFinal)
+
