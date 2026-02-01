@@ -1,6 +1,6 @@
 import Xifrat
 
-
+#Funcio per mostrar el menu
 def mostrar_pantalla():
     print("Enigma")
     print("-------------")
@@ -10,7 +10,7 @@ def mostrar_pantalla():
     print("4. Desxifrar")
     print("5. Sortir")
 
-
+#Funcio per escollir les 4 opcions enllacant al altre archiu
 def opcio_1():
     Xifrat.Notches()
 
@@ -18,7 +18,7 @@ def opcio_1():
 def opcio_2():
     Xifrat.xifrar()
 
-
+#aqui obrim el txt per escriure que s'ha borrat
 def opcio_3():
     archivo = open('Text.txt', 'w')
     archivo.write(" ")
@@ -27,7 +27,7 @@ def opcio_3():
 
 def opcio_4():
     Xifrat.desxifrar()
-
+#En aquest bucle posem les 4 opcions a clickar per l'usuari i les dirigim a les seves funcions
 while True:
     mostrar_pantalla()
     opcio = input("Selecciona que vols fer (1-3)")
@@ -46,4 +46,5 @@ while True:
     else:
         print("No es una opcio valida")
       
+
 
