@@ -1,0 +1,7 @@
+
+def aplicar_abecedari_dins_txt(abecedari):
+    with open('desxifrat.txt', 'r') as fitxer:
+        contingut = fitxer.read()
+    contingut_filtrat = 'desxifrat.txt'.join([caracter for caracter in contingut if caracter in abecedari])
+    with open('desxifrat.txt', 'w') as fitxer:
+        fitxer.write(contingut_filtrat)
